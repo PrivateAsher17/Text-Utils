@@ -2,7 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
-// import About from "./components/About";
+import About from "./components/About";
 import React, { useState } from 'react'
 import Alert from "./components/Alert";
 
@@ -17,7 +17,7 @@ function App() {
       })
       setTimeout(() => {
         setAlert(null)
-      }, 1500);
+      }, 2000);
   }
 
   const toggleMode=()=>{
@@ -65,6 +65,10 @@ function App() {
     }
     }
 
+    const searchFunctionality=()=>{
+      showAlert('Search Functionality is not available right now, stay tuned!!!','success')
+    }
+
     const purpleTheme=()=>{if (mode!=='purple'){
       setMode('purple')
       document.body.style.backgroundColor = 'purple'
@@ -79,12 +83,16 @@ function App() {
     }
     }
 
+    const aboutPage=()=>{
+      showAlert('Scroll Down to see About Page','success')
+    }
+
   
 
   return (
     <>
     {/* <Router> */}
-      <Navbar title="TextUtilsBlog" aboutText="About TextUtils" toggleMode={toggleMode} mode={mode} blackTheme={blackTheme} greenTheme={greenTheme} purpleTheme={purpleTheme} />
+      <Navbar title="TextUtilsBlog" aboutText="About TextUtils" toggleMode={toggleMode} mode={mode} blackTheme={blackTheme} greenTheme={greenTheme} purpleTheme={purpleTheme} aboutPage={aboutPage} searchFunctionality={searchFunctionality} />
       <Alert alert={alert} />
       {/* <Switch>
           <Route exact path="/about">
@@ -93,7 +101,8 @@ function App() {
           
           <Route exact path="/"> */}
           <TextForm heading="Enter Your Text Here to Analyze..." mode={mode} showAlert={showAlert} />
-          {/* <About /> */}
+          <br></br>
+          <About />
           {/* </Route>
         </Switch> */}
       {/* <TextForm heading="Enter Your Text Here to Analyze..." mode={mode} showAlert={showAlert} /> */}

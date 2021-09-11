@@ -36,7 +36,9 @@ export default function TextForm(props) {
     for (let i=0; i<a1.length;i++){ a2.push(a1[i][0].toUpperCase() + a1[i].slice(1).toLowerCase())}
     let newText = a2.join(' ')
     setText(newText)
-    props.showAlert("Capitalized each word", "success")
+    props.showAlert('First Remove Extra Spaces to Capitalize each word, Ignore if already did!', 'success')
+    // props.showAlert("Capitalized each word", "success")
+    
   }
 
   const handleExtraSpaces = () =>{

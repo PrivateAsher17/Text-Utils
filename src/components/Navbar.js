@@ -28,7 +28,7 @@ export default function Navbar(props) {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" style={{color: (props.mode=='light')?'black':'white'}} href="#">
+              <a className="nav-link" onClick={props.aboutPage} style={{color: (props.mode=='light')?'black':'white'}} href="#">
                 {props.aboutText}
               </a>
             </li>
@@ -43,7 +43,7 @@ export default function Navbar(props) {
               color : props.mode==='light'?'black':'white'}}
               className="form-control me-2"
               type="search"
-              placeholder="Search"
+              placeholder="Search Not Available"
               aria-label="Search"
             />
             <button className="btn btn-primary" type="submit">
