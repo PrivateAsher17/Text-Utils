@@ -5,12 +5,7 @@ import TextForm from "./components/TextForm";
 // import About from "./components/About";
 import React, { useState } from 'react'
 import Alert from "./components/Alert";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+
 
 function App() {
   const [mode, setMode] = useState('light')
@@ -98,6 +93,7 @@ function App() {
           
           <Route exact path="/"> */}
           <TextForm heading="Enter Your Text Here to Analyze..." mode={mode} showAlert={showAlert} />
+          {/* <About /> */}
           {/* </Route>
         </Switch> */}
       {/* <TextForm heading="Enter Your Text Here to Analyze..." mode={mode} showAlert={showAlert} /> */}
