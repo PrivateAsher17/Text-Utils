@@ -100,7 +100,7 @@ function App() {
           </Route>
           
           <Route exact path="/"> */}
-          <TextForm heading="Enter Your Text Here to Analyze..." mode={mode} showAlert={showAlert} />
+          <TextForm heading="Try TextUtils - Word Counter, Character Counter, Remove Extra Spaces" mode={mode} showAlert={showAlert} />
           <br></br>
           <About />
           {/* </Route>
